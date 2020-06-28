@@ -1,11 +1,10 @@
-const twoFer = (name) => {
-    if (name !== undefined){
-      return `One for ${name}, one for me.`;
-    }
-    else {
-      return "One for you, one for me.";
-  
-    }
+const twoFer = (name = 'you') => {
+    return `One for ${name}, one for me.`;
   };
-  twoFer();
   
+  twoFer('alice');
+
+  
+// Without any value when the function is called will produce "one for you, one for me".
+
+// Calling the function with Alice gave me "one for Alice, one for me".
